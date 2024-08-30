@@ -3,8 +3,8 @@ Esta es el link de la página de restos usada
 https://the-internet.herokuapp.com/
 
 Retos realizados
-1. Agregar y eliminar elementos
-2. Elementos dinámicos
-3. Controles dinámicos
-4. Typos
-5. Ordenar tablas
+1. Agregar y eliminar elementos - add_remove_elements.py
+2. Elementos dinámicos - dynamic_elements.py
+3. Controles dinámicos - dynamic_controls.py
+4. Typos - typos.py
+5. Ordenar tablas - tables.py
