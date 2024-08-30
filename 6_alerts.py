@@ -27,6 +27,7 @@ class CompareProducts(unittest.TestCase):
 		
 		#creamos una variable para interactuar con el pop-up
 		alert = driver.switch_to_alert()
+		# alert = driver.switch_to.alert 
 		#vamos a extraer el texto que muestra
 		alert_text = alert.text
 
@@ -41,3 +42,10 @@ class CompareProducts(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2,testRunner=HTMLTestRunner(output="reportes", report_name="prueba_alerts_pop-up"))
+
+# Si sale algún error de "AttributeError: 'WebDriver' object has no attribute 'switch_to_alert'" esta es la solución
+# Reemplazar esto
+# alert = driver.switch_to_alert()
+
+# Por esto
+# alert = driver.switch_to.alert 
