@@ -41,7 +41,7 @@ class CompareProducts(unittest.TestCase):
 		self.driver.close()
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2,testRunner=HTMLTestRunner(output="reportes", report_name="prueba_alerts_pop-up"))
+    unittest.main(verbosity=2, testRunner=HTMLTestRunner(output="reportes", report_name="prueba_alerts_pop-up"))
 
 # Si sale algún error de "AttributeError: 'WebDriver' object has no attribute 'switch_to_alert'" esta es la solución
 # Reemplazar esto
