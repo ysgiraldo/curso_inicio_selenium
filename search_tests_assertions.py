@@ -26,8 +26,8 @@ class SearchTests(unittest.TestCase):
 		driver = self.driver
 		search_field = driver.find_element_by_name('q')
 		
-		search_field.send_keys('salt shaker') #escribimos 'salt shaker' en la barra de búsqueda
-		search_field.submit() #envíamos la petición
+		search_field.send_keys('salt shaker') # escribimos 'salt shaker' en la barra de búsqueda
+		search_field.submit() #envíamos la petición para obtener un resultados de búsqueda
 
 		#hago una lista de los resultados buscando los elementos por su Xpath. Es la forma más rápida.
 		products = driver.find_elements_by_xpath('//*[@id="top"]/body/div/div[2]/div[2]/div/div[2]/div[2]/div[3]/ul/li/div/h2/a')
