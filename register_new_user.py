@@ -1,4 +1,5 @@
 import unittest
+from pyunitreport import HTMLTestRunner
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service 
 from webdriver_manager.chrome import ChromeDriverManager
@@ -11,7 +12,8 @@ class RegisterNewUser(unittest.TestCase):
 		driver = self.driver
 		driver.implicitly_wait(30)
 		driver.maximize_window()
-		driver.get("http://demo.onestepcheckout.com/")
+		# driver.get("http://demo.onestepcheckout.com/")
+		driver.get("http://demo-store.seleniumacademy.com/")
 	
 	def test_new_user(self): 
 		driver = self.driver
@@ -47,7 +49,9 @@ class RegisterNewUser(unittest.TestCase):
 		and news_letter_subscription.is_enabled()
 		and submit_button.is_enabled())
 
-		#mandamos los datos al formulario
+		# Mandamos los datos al formulario
+		# Estos son de ejemplo, si fueran reales, no sería buena práctica colocarlos de esta forma
+		# directa en el código
 		first_name.send_keys('Test')
 		last_name.send_keys('Test')
 		email_address.send_keys('arqcftlothxuknlxkt@awdrt.com') #sacado de 10-minute mail
@@ -60,4 +64,4 @@ class RegisterNewUser(unittest.TestCase):
 		self.driver.close()
 
 if __name__ == "__main__":
-	unittest.main(verbosity = 2)
+	unittest.main(verbosity = 2, testRunner = HTMLTestRunner(output = 'manejo', report_name = 'form-textbox-checkbox-radiobutton'))
